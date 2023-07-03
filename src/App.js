@@ -1,24 +1,39 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import {
+  BrowserRouter,
+} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Location from './pages/location.js';
+import League from './pages/league.js';
+import Coaches from './pages/coaches.js';
+import Contact from './pages/contact.js';
+import Gloves from './pages/gloves.js';
+import Balls from './pages/balls.js';
+import Cleats from './pages/cleats.js';
+import Register from './pages/register_league';
+import Bar from './pages/components/bar';
+import Home from './pages/home.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <BrowserRouter>
+    <Bar />
+    <div>
+      <Routes>
+        <Route exact path="/" element={<Home />}/>
+        <Route path="/location" element={<Location />}/>
+        <Route path="/league" element={<League />}/>
+        <Route path="/register" element={<Register />}/>
+        <Route path="/coaches" element={<Coaches />}/>
+        <Route path="/contact" element={<Contact />}/>
+        <Route path="/gloves" element={<Gloves />}/>
+        <Route path="/cleats" element={<Cleats />}/>
+        <Route path="/balls" element={<Balls />}/>
+      </Routes>
     </div>
+   
+  </BrowserRouter>
   );
 }
 
