@@ -17,7 +17,7 @@ import Home from './pages/home.js';
 
 function App() {
   return (
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Bar />
     <div>
       <Routes>
