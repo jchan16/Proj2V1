@@ -1,8 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import {
-  BrowserRouter,
-} from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import Location from './pages/location.js';
 import League from './pages/league.js';
@@ -17,7 +15,7 @@ import Home from './pages/home.js';
 
 function App() {
   return (
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <HashRouter basename={process.env.PUBLIC_URL}>
     <Bar />
     <div>
       <Routes>
@@ -33,7 +31,7 @@ function App() {
       </Routes>
     </div>
    
-  </BrowserRouter>
+  </HashRouter>
   );
 }
 
