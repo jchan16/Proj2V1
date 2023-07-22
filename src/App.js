@@ -19,7 +19,7 @@ function App() {
     <Bar />
     <div>
       <Routes>
-        <Route exact path="/" element={<Home />}/>
+        <Route index element={<Home />}/>
         <Route path="/location" element={<Location />}/>
         <Route path="/league" element={<League />}/>
         <Route path="/register" element={<Register />}/>
