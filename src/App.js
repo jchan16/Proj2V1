@@ -29,6 +29,7 @@ function App() {
         <Route path="/cleats" element={<Cleats />}/>
         <Route path="/balls" element={<Balls />}/>
       </Routes>
+      <Home />
     </div>
    
   </HashRouter>
